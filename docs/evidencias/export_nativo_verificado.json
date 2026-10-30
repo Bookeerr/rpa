@@ -1,0 +1,16 @@
+{
+  "export_path": "rocketbot/MAIN_TESTFIRE_EP2/EXPORT_TESTFIRE_EP2.db",
+  "sha256": "7c099c29935b76701a46c15951774a654311e73306db6756af93489d28ed2a08",
+  "native_robots": [
+    "MAIN_TESTFIRE_EP2",
+    "WEB_LOGIN",
+    "EXTRACT_TRANSACTIONS"
+  ],
+  "official_endpoint": "/projectto/0",
+  "reopened_with_studio": true,
+  "second_pc": false,
+  "native_commands": 54,
+  "executed_requests": 1502,
+  "native_errors": 0,
+  "execution_id": "076648bf-3612-42b9-b915-d14cd7982d57"
+}

@@ -1,0 +1,28 @@
+flowchart TB
+  WEB["TestFire HTTPS / bloqueo TLS observado"]
+  subgraph PC1["Cliente Windows 1"]
+    RB["Rocketbot Studio instalado / licencia activa observada"]
+    B["Navegador / flujo PENDIENTE"]
+    LOCAL["Maestro versionado + output UUID local"]
+    NATIVE["Proyecto nativo real / flujo web PENDIENTE"]
+    RB --> B
+    RB --> LOCAL
+    NATIVE -.-> RB
+  end
+  subgraph HOST["Host Windows / despliegue de negocio PENDIENTE"]
+    SQL["MySQL 8.4 servicio / esquema entregado"]
+    API["API Flask / proceso separado / implementado"]
+    API -->|SQL| SQL
+  end
+  subgraph PC2["Cliente Windows 2 / PENDIENTE real"]
+    R2["Rocketbot + navegador"]
+    L2["Maestro y evidencias locales PC2"]
+    R2 --> L2
+  end
+  B -->|HTTPS| WEB
+  R2 -->|HTTPS| WEB
+  RB -->|LAN SQL 3306 configurable| SQL
+  R2 -->|LAN SQL 3306 configurable| SQL
+  RB -->|HTTP 8000 configurable| API
+  R2 -->|HTTP 8000 configurable| API
+  NOTE["SQL comparte datos estructurados; archivos locales NO se sincronizan. SMB no implementado."]

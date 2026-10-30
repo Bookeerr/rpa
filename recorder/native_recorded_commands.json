@@ -1,0 +1,58 @@
+[
+  {
+    "father": "sendkey_web",
+    "command": "{\"data\": \"//*[@id=\\\"uid\\\"]\", \"data_type\": \"xpath\", \"wait_time\": 30, \"text\": \"{usuario}\", \"special\": \"\"}",
+    "stop_onerror": false,
+    "run_onerror": false,
+    "stop_robot_onerror": false,
+    "run_onerror_robot": "",
+    "run_when": "True",
+    "id": "159051c3-e4cc-40a1-859c-8de85e284f3d",
+    "group": "web",
+    "mode_live": false,
+    "children": [],
+    "else": []
+  },
+  {
+    "father": "sendkey_web",
+    "command": "{\"data\": \"//*[@id=\\\"passw\\\"]\", \"data_type\": \"xpath\", \"wait_time\": 30, \"text\": \"{clave}\", \"special\": \"\"}",
+    "stop_onerror": false,
+    "run_onerror": false,
+    "stop_robot_onerror": false,
+    "run_onerror_robot": "",
+    "run_when": "True",
+    "id": "4ee78c73-ea9b-4ba7-a7cc-a35ccaa0c302",
+    "group": "web",
+    "mode_live": false,
+    "children": [],
+    "else": []
+  },
+  {
+    "father": "click_web",
+    "command": "{\"data\": \"//input[@name=\\\"btnSubmit\\\"]\", \"data_type\": \"xpath\", \"before\": \"0\", \"wait_time\": \"30\", \"after\": \"1\", \"move\": false}",
+    "stop_onerror": false,
+    "run_onerror": false,
+    "stop_robot_onerror": false,
+    "run_onerror_robot": "",
+    "run_when": "True",
+    "id": "ef960da3-fab7-4c76-b14e-b6882f22c317",
+    "group": "web",
+    "mode_live": false,
+    "children": [],
+    "else": []
+  },
+  {
+    "father": "click_web",
+    "command": "{\"data\": \"//*[@id=\\\"MenuHyperLink2\\\"]\", \"data_type\": \"xpath\", \"before\": \"0\", \"wait_time\": \"30\", \"after\": \"1\", \"move\": false}",
+    "stop_onerror": false,
+    "run_onerror": false,
+    "stop_robot_onerror": false,
+    "run_onerror_robot": "",
+    "run_when": "True",
+    "id": "87b67627-cacd-4699-ae3b-4aa25c19d448",
+    "group": "web",
+    "mode_live": false,
+    "children": [],
+    "else": []
+  }
+]

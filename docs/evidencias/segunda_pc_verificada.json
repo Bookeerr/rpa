@@ -1,0 +1,26 @@
+{
+  "verified_at": "2026-10-19T19:21:15.954892+00:00",
+  "execution_id": "6d450ccd-3e4a-4c19-a03d-d0f3aa9bdcc4",
+  "client_hostname": "DESKTOP-OFQ9QLA",
+  "client_ip_reported": "192.168.1.96",
+  "source": "execution.json proporcionado por el usuario",
+  "source_sha256": "3a489a7ccf4ce80284ec4dcc19d5dd7fe57bd7d66418938f9313bd1d33fc3759",
+  "web_excel_api_complete_reported": true,
+  "sqlite_receipt_found": true,
+  "api_get_status": 200,
+  "api_matches_sqlite": true,
+  "hostname_and_counts_match": true,
+  "receipt": {
+    "discrepancias": 196,
+    "duracion_hasta_envio_ms": 99656,
+    "equipo": "DESKTOP-OFQ9QLA",
+    "estado_proceso": "CONCILIACION_COMPLETADA",
+    "execution_id": "6d450ccd-3e4a-4c19-a03d-d0f3aa9bdcc4",
+    "movimientos_rechazados": 4,
+    "movimientos_validos": 96
+  },
+  "pending_label_second_pc": "Etiqueta estatica del codigo anterior; evidencia de segunda PC confirmada",
+  "mysql": "PENDIENTE_POR_INDICACION_USUARIO",
+  "excel_file_independently_inspected": false,
+  "simultaneous_two_pc_run_verified": false
+}

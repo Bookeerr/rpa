@@ -1,0 +1,25 @@
+{
+  "execution_id": "e967c39e-3b8a-4df1-9d11-87dfcff8ac97",
+  "mode": "ROCKETBOT_SINTETICO",
+  "status": "PARCIAL",
+  "started_at": "2026-10-16T19:08:08.061190+00:00",
+  "ended_at": "2026-10-16T19:08:19.267419+00:00",
+  "duration_ms": 11206.438,
+  "native_commands": 38,
+  "executed_requests": 61,
+  "native_errors": 0,
+  "http_statuses": [
+    200,
+    201,
+    200,
+    200
+  ],
+  "classifications": {
+    "CONCILIADO": 1,
+    "DISCREPANCIA": 1,
+    "SOLO_MASTER": 1,
+    "SOLO_WEB": 1
+  },
+  "database": "rocketbot/MAIN_TESTFIRE_EP2/robot.db",
+  "database_sha256": "451e7444f3afb769f3ca4c48f33636904d4cbef163e579f56b246e46e164fe78"
+}

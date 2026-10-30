@@ -1,0 +1,35 @@
+flowchart TD
+  A["S01 INIT_CONFIG / AUDIT_START"] --> B["S02 WEB_LOGIN"]
+  B --> C{"Sesion valida?"}
+  C -->|No| X["ERROR_HANDLER / ERROR"]
+  C -->|Si| D["S03 EXTRACT_ACCOUNTS"]
+  D --> E{"Otra cuenta seleccionada?"}
+  E -->|Si| F["S04 EXTRACT_TRANSACTIONS"]
+  F --> T{"Tabla y sesion presentes?"}
+  T -->|No| X
+  T -->|Si| G{"Otra fila?"}
+  G -->|Si| H["S05 VALIDATE_DATA"]
+  H --> I{"Fila valida?"}
+  I -->|Si| J["Agregar movimiento"]
+  I -->|No| K["Conservar rechazo"]
+  J --> G
+  K --> G
+  G -->|No| E
+  E -->|No| L["S06 READ_REFERENCES / Excel y SQL"]
+  L --> M{"Referencias disponibles?"}
+  M -->|No| P["PARCIAL / cola local"]
+  M -->|Si| N["S07 RECONCILE / For pares e IF estados"]
+  N --> O["S08 SAVE_DATABASE"]
+  O --> Q{"SQL confirmado?"}
+  Q -->|No| P
+  Q -->|Si| R["S09 HTTP / GET health - POST - GET id"]
+  R --> S{"Respuesta y persistencia validas?"}
+  S -->|Si| V["S10 EXPORT_EXCEL"]
+  S -->|No| U{"Transitorio e intento menor a 3?"}
+  U -->|Si| R
+  U -->|No| P
+  X --> V
+  P --> V
+  V --> W["S11 FINALIZE / cerrar navegador y auditar"]
+  W --> Y["Estado segun evidencia: OK / PARCIAL / ERROR"]
+  Z["DISENO PENDIENTE de montaje y prueba en Studio"]

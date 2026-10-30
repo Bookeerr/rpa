@@ -1,0 +1,23 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: Arial
+    fontSize: 20px
+  flowchart:
+    rankSpacing: 18
+    nodeSpacing: 18
+    padding: 10
+    wrappingWidth: 280
+---
+flowchart TB
+  A["DEMO_LOCAL_EP2<br/>Raiz + UUID + auditoria"] --> B["For de 4 filas locales / IF valida<br/>3 validos + 1 rechazo"]
+  B --> C["Maestro Excel + reglas sinteticas<br/>Sin lectura MySQL"]
+  C --> D["For de pares + IF clasifica<br/>4 resultados conservados"]
+  D --> E{"GET health<br/>API disponible?"}
+  E -->|Si| F["While POST: maximo 3 intentos<br/>POST repetido + GET / IF acuse"]
+  E -->|No| G["Error HTTP registrado"]
+  F --> H["Excel 5 hojas + JSON + auditoria"]
+  G --> H
+  H --> I["FINALIZE: PARCIAL<br/>Web, recorder, MySQL y PC2 pendientes"]
+  NOTE["SINTETICO / ejecutado en Studio<br/>Try Catch envuelve pasos 2 a 7"]

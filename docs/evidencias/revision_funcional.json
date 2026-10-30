@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-18",
+  "python_tests": 48,
+  "node_tests": 6,
+  "python_test_evidence": "docs/evidencias/pytest_revision.xml",
+  "node_test_command": "node --test tests/test_studio_verification.cjs",
+  "dependency_checks": {
+    "ep1": "OK",
+    "ep2": "OK"
+  },
+  "syntax": {
+    "python": "OK",
+    "powershell": "OK",
+    "node": "OK"
+  },
+  "native_databases_integrity": "OK",
+  "api_sqlite_integrity": "OK",
+  "previous_receipt_after_restart": "HTTP 200; UUID confirmed",
+  "document_checks": {
+    "report_pages": 12,
+    "presentation_pages": 8,
+    "pptx_slides": 8,
+    "powerpoint_render": "PENDIENTE"
+  },
+  "not_executed": [
+    "MySQL real",
+    "Segunda PC",
+    "EP1 en navegador",
+    "Aceptacion docente de recorder alternativo"
+  ],
+  "changed_sources_sha256": {
+    "api/local_store.py": "9968579ea5ec80125bc9f6170420a5560a570515c481c5433ffde28655ca956b",
+    "auxiliaries/studio_web.py": "61094397c8acba05058b963146de8e5012a600af8d61792372ad9011de9b3044",
+    "scripts/studio_run_smoke.cjs": "baa983961ababbc74bd2110b62f7b180b4e0b32c7203b8575f936a033e23b96c",
+    "scripts/studio_verification.cjs": "d2e8cafd149ae651bdc1623fd176f273bb7c6aa1f113e2dee05035e7f35a8cbc",
+    "tests/test_studio_verification.cjs": "bf10ccc76c671058b83a06e067cb249376a2deb739c021dc3a07cdb462022fd1",
+    "tests/test_web_delivery.py": "88cec21eebe343bae81395327f800072a5dc08e782805b11870fdae7f62e9285"
+  },
+  "execution_id": "8227c107-4f77-45c8-a2c8-457b51249ff4",
+  "execution_status": "PARCIAL",
+  "web_excel_api_complete": true,
+  "valid_rows": 96,
+  "rejected_rows": 4,
+  "rejection_reasons": {
+    "Importe fuera de DECIMAL(18,2)": 4
+  },
+  "classifications": {
+    "SOLO_WEB": 96,
+    "SOLO_MASTER": 100
+  },
+  "duration_ms": 163548.867,
+  "native_responses": 1502,
+  "native_errors": 0,
+  "http_statuses": [
+    200,
+    201,
+    200,
+    200
+  ],
+  "api_receipt_confirmed": true,
+  "report": "output/8227c107-4f77-45c8-a2c8-457b51249ff4/Reporte_TestFire_20261018_152220_8227c107-4f77-45c8-a2c8-457b51249ff4.xlsx",
+  "report_sha256_verified": true,
+  "excel_sheets": [
+    "Movimientos",
+    "Conciliacion",
+    "Rechazados",
+    "Auditoria",
+    "Resumen"
+  ],
+  "active_steps_empty": true
+}

@@ -1,0 +1,86 @@
+erDiagram
+  executions {
+    CHAR execution_id PK
+    VARCHAR hostname
+    VARCHAR os_user
+    VARCHAR robot_version
+    CHAR config_hash
+    DATETIME started_at
+    DATETIME ended_at
+    DECIMAL duration_ms
+    ENUM status
+    JSON summary
+  }
+  account_rules {
+    VARCHAR account PK
+    BOOLEAN enabled
+    DECIMAL tolerance
+    VARCHAR version
+  }
+  step_audit {
+    CHAR event_id PK
+    CHAR execution_id
+    VARCHAR step_id
+    INT step_order
+    INT attempt
+    DATETIME started_at
+    DATETIME ended_at
+    DECIMAL duration_ms
+    ENUM status
+    TEXT detail
+    TEXT evidence
+  }
+  transactions {
+    CHAR extraction_id PK
+    CHAR execution_id
+    VARCHAR account
+    INT row_index
+    DATE transaction_date
+    TEXT description_norm
+    DECIMAL amount
+    VARCHAR currency
+    DECIMAL balance
+    VARCHAR web_id
+    TEXT source_url
+    JSON raw_data
+  }
+  reconciliation_results {
+    CHAR result_id PK
+    CHAR execution_id
+    ENUM status
+    JSON web_ref
+    JSON master_ref
+    JSON detail
+  }
+  api_calls {
+    CHAR call_id PK
+    CHAR execution_id
+    VARCHAR method
+    TEXT endpoint
+    INT attempt
+    DECIMAL duration_ms
+    INT http_status
+    VARCHAR error
+    TEXT request_ref
+    TEXT response_ref
+  }
+  artifacts {
+    CHAR artifact_id PK
+    CHAR execution_id
+    VARCHAR hostname
+    VARCHAR relative_path
+    VARCHAR kind
+    CHAR sha256
+    ENUM availability
+  }
+  api_receipts {
+    CHAR execution_id PK
+    CHAR payload_hash
+    JSON payload
+    DATETIME received_at
+  }
+  executions ||--o{ step_audit : "execution_id"
+  executions ||--o{ transactions : "execution_id"
+  executions ||--o{ reconciliation_results : "execution_id"
+  executions ||--o{ api_calls : "execution_id"
+  executions ||--o{ artifacts : "execution_id"

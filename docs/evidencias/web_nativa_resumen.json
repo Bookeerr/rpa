@@ -1,0 +1,35 @@
+{
+  "execution_id": "076648bf-3612-42b9-b915-d14cd7982d57",
+  "hostname": "DESKTOP-HNO1Q0F",
+  "os_user": "WinterOS",
+  "robot_version": "EP2-0.1",
+  "config_hash": "71783b48b8cd92d44a95554caf27da8a91134fe383057084e58142bdabe7841b",
+  "started_at": "2026-10-18T11:41:10.531929+00:00",
+  "ended_at": "2026-10-18T11:44:37.045664+00:00",
+  "duration_ms": 206513.858,
+  "status": "PARCIAL",
+  "mode": "ROCKETBOT_WEB_EXCEL_API_LOCAL",
+  "web_excel_api_complete": true,
+  "valid_rows": 96,
+  "rejected_rows": 4,
+  "classifications": {
+    "SOLO_MASTER": 100,
+    "SOLO_WEB": 96
+  },
+  "http_ok": true,
+  "pending": [
+    "MYSQL_POR_INDICACION_USUARIO",
+    "SEGUNDA_PC"
+  ],
+  "reference": "Snapshot externo previo; no representa contabilidad independiente",
+  "report": "output/076648bf-3612-42b9-b915-d14cd7982d57/Reporte_TestFire_20261018_084434_076648bf-3612-42b9-b915-d14cd7982d57.xlsx",
+  "http_statuses": [
+    200,
+    201,
+    200,
+    200
+  ],
+  "recorder": "DOM propio EP2 v1",
+  "recorder_acceptance": "PENDIENTE_DOCENTE",
+  "tests_passed": 45
+}

@@ -1,0 +1,15 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: Arial
+    fontSize: 20px
+  flowchart:
+    rankSpacing: 25
+    nodeSpacing: 20
+    padding: 12
+---
+flowchart LR
+  A["1 Configurar<br/>Login real"] --> B["2 Extraer<br/>Regex y controles"]
+  B --> C["3 Conciliar<br/>Excel externo"]
+  C --> D["4 Registrar<br/>API local y Excel"]

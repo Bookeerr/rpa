@@ -1,0 +1,17 @@
+flowchart TB
+  subgraph ANTES["EP1 comprobada en archivos historicos"]
+    A["Selenium / consulta y extraccion"] --> B["SQLite local / Excel / graficos"]
+    B --> C["Sin conciliacion Excel-SQL en codigo inspeccionado"]
+  end
+  subgraph AHORA["EP2 web y auxiliares EJECUTADOS"]
+    D["Regex + Decimal + fechas semanticas"] --> E["Maestro + reglas + multiplicidad"]
+    E --> F["Rocketbot / XPath / HTTP persistente / Excel"]
+  end
+  subgraph PEND["PENDIENTE de validacion real"]
+    G["Aceptacion docente del recorder alternativo"] --> H["MySQL compartida + segunda PC"]
+    H --> I["Medir mismo alcance manual y robot"]
+  end
+  C --> D
+  F --> G
+  FUT["FUTURO: SMB / agenda / VM opcional; sin envios ni pagos"]
+  I -.-> FUT

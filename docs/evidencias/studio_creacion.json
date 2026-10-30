@@ -1,0 +1,26 @@
+{
+  "http_status": 200,
+  "response": {
+    "success": true,
+    "message": "Project created successfully",
+    "data": {
+      "db": "rocketbot/MAIN_TESTFIRE_EP2/robot.db",
+      "db_path": "[RUTA_LOCAL_BASE64_REDACTADA]",
+      "bots": [
+        {
+          "id": 1,
+          "type": "robot",
+          "name": "MAIN_TESTFIRE_EP2",
+          "data": "IiI=",
+          "description": "EP2 consulta y conciliacion. Montaje en desarrollo, pendiente pruebas web.",
+          "created_at": "2026-10-16 10:11:39",
+          "data_type": "normal",
+          "counts": 1,
+          "exposed": {},
+          "db_path": "[RUTA_LOCAL_BASE64_REDACTADA]"
+        }
+      ]
+    }
+  },
+  "redaction_note": "Rutas personales sustituidas por referencia relativa; respuesta restante conservada."
+}

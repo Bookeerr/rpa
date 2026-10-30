@@ -1,0 +1,37 @@
+{
+  "recorder": "Grabador DOM propio EP2; no es Rocketbot Recorder oficial",
+  "started_at": "2026-10-18T11:34:41.421Z",
+  "ended_at": "2026-10-18T11:34:44.089Z",
+  "events": [
+    {
+      "action": "input",
+      "selector": "//*[@id=\"uid\"]",
+      "variable": "usuario",
+      "trusted": true,
+      "url": "http://demo.testfire.net/login.jsp",
+      "at": "2026-10-18T11:34:41.421Z"
+    },
+    {
+      "action": "input",
+      "selector": "//*[@id=\"passw\"]",
+      "variable": "clave",
+      "trusted": true,
+      "url": "http://demo.testfire.net/login.jsp",
+      "at": "2026-10-18T11:34:41.488Z"
+    },
+    {
+      "action": "click",
+      "selector": "//input[@name=\"btnSubmit\"]",
+      "trusted": true,
+      "url": "http://demo.testfire.net/login.jsp",
+      "at": "2026-10-18T11:34:41.489Z"
+    },
+    {
+      "action": "click",
+      "selector": "//*[@id=\"MenuHyperLink2\"]",
+      "trusted": true,
+      "url": "http://demo.testfire.net/bank/main.jsp",
+      "at": "2026-10-18T11:34:42.624Z"
+    }
+  ]
+}

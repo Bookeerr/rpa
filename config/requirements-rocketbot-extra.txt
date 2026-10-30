@@ -1,0 +1,4 @@
+# Solo paquetes puros adicionales verificados en Rocketbot 2025.07.01 / Python 3.13.5.
+# Destino externo soportado: Rocketbot/_internal/modules/libs.
+python-dotenv==1.2.4
+pytz==2026.5

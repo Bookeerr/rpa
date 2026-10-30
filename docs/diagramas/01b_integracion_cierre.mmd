@@ -1,0 +1,32 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: Arial
+    fontSize: 20px
+  flowchart:
+    rankSpacing: 16
+    nodeSpacing: 16
+    padding: 8
+    wrappingWidth: 240
+---
+flowchart TD
+  A["Desde captura: READ_REFERENCES Excel + SQL"] --> B{"Referencias validas?"}
+  B -->|Si| C["RECONCILE: For pares + IF clasificaciones"]
+  B -->|No| P["Marcar PARCIAL + preservar cola"]
+  C --> D["SAVE_DATABASE: transaccion corta"]
+  D --> E{"SQL confirmado?"}
+  E -->|No| P
+  E -->|Si| F["HTTP: GET health + POST fijo + GET id"]
+  F --> G{"Respuesta y acuse validos?"}
+  G -->|No| H{"Transitorio e intento menor a 3?"}
+  H -->|Si| F
+  H -->|No| P
+  G -->|Si| X["EXPORT_EXCEL"]
+  P --> X
+  X --> Y{"Exportacion correcta?"}
+  Y -->|No| ERR["ERROR + conservar JSON"]
+  Y -->|Si| Z["FINALIZE: cerrar navegador, eventos y SQL"]
+  ERR --> Z
+  Z --> END["OK solo si todo confirmado; PARCIAL o ERROR en fallos"]
+  NOTE["DISENO: comprobacion en Studio pendiente"]

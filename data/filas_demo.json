@@ -1,0 +1,6 @@
+[
+  {"account":"800003","date_raw":"2026-10-01","description":"Deposito demo","amount_raw":"100.00","web_id":"DEMO-1","row_index":1,"source_url":"SINTETICO"},
+  {"account":"800003","date_raw":"2026-10-02","description":"Cargo demo","amount_raw":"-24.00","web_id":"DEMO-2","row_index":2,"source_url":"SINTETICO"},
+  {"account":"800003","date_raw":"2026-10-04","description":"Solo web","amount_raw":"8.00","web_id":"DEMO-4","row_index":3,"source_url":"SINTETICO"},
+  {"account":"800003","date_raw":"2026-02-30","description":"Invalido","amount_raw":"1.234,56","web_id":null,"row_index":4,"source_url":"SINTETICO"}
+]

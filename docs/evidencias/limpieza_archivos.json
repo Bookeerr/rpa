@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-18",
+  "method": "traslado reversible; sin borrado",
+  "backup": ".limpieza_respaldo/20261018",
+  "moved_files": 55,
+  "moved_bytes": 8198997,
+  "entries": [
+    {
+      "path": "entrega/TestFire_EP2_AVANCE_20261017.zip",
+      "files": 1,
+      "bytes": 5984220
+    },
+    {
+      "path": "docs/entrega/Informe_Tecnico_EP2_AVANCE.pdf",
+      "files": 1,
+      "bytes": 1096170
+    },
+    {
+      "path": "docs/entrega/Presentacion_EP2_AVANCE.pdf",
+      "files": 1,
+      "bytes": 69095
+    },
+    {
+      "path": "docs/entrega/Presentacion_EP2_AVANCE.pptx",
+      "files": 1,
+      "bytes": 108649
+    },
+    {
+      "path": "scripts/studio_inspect.cjs",
+      "files": 1,
+      "bytes": 1049
+    },
+    {
+      "path": "scripts/studio_inspect_export.cjs",
+      "files": 1,
+      "bytes": 768
+    },
+    {
+      "path": "scripts/studio_inspect_form.cjs",
+      "files": 1,
+      "bytes": 1367
+    },
+    {
+      "path": "scripts/record_native_desktop.cjs",
+      "files": 1,
+      "bytes": 3003
+    },
+    {
+      "path": "recorder/desktop_controls.json",
+      "files": 1,
+      "bytes": 2
+    },
+    {
+      "path": "docs/evidencias/recorder_browser.png",
+      "files": 1,
+      "bytes": 100684
+    },
+    {
+      "path": "docs/evidencias/revision_pdf.png",
+      "files": 1,
+      "bytes": 548340
+    },
+    {
+      "path": ".pytest_cache",
+      "files": 4,
+      "bytes": 3362
+    },
+    {
+      "path": "auxiliaries/__pycache__",
+      "files": 12,
+      "bytes": 66605
+    },
+    {
+      "path": "api/__pycache__",
+      "files": 3,
+      "bytes": 12925
+    },
+    {
+      "path": "scripts/__pycache__",
+      "files": 14,
+      "bytes": 70793
+    },
+    {
+      "path": "tests/__pycache__",
+      "files": 11,
+      "bytes": 131965
+    }
+  ],
+  "verification": {
+    "tests_passed": 45,
+    "tests_seconds": 14.07,
+    "local_links_checked": true,
+    "moved_targets_checked": 16,
+    "package_auxiliary_portability": true,
+    "functional_robot_changed": false,
+    "disk_space_freed": false
+  }
+}

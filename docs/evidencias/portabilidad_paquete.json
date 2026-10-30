@@ -1,0 +1,23 @@
+{
+  "execution_id": "fff638f0-222e-403e-8038-878fd7841d0f",
+  "status": "PARCIAL",
+  "mode": "SINTETICO_SIN_ROCKETBOT",
+  "report": "output/fff638f0-222e-403e-8038-878fd7841d0f/Reporte_TestFire_20261020_140325_fff638f0-222e-403e-8038-878fd7841d0f.xlsx",
+  "classifications": {
+    "CONCILIADO": 1,
+    "DISCREPANCIA": 1,
+    "SOLO_MASTER": 1,
+    "SOLO_WEB": 1
+  },
+  "archive": "entrega/TestFire_EP2_20261020.zip",
+  "extracted_path_with_spaces": true,
+  "different_working_directory": true,
+  "excel_sheets": [
+    "Movimientos",
+    "Conciliacion",
+    "Rechazados",
+    "Auditoria",
+    "Resumen"
+  ],
+  "scope": "AUXILIARES; no acredita otra PC ni Studio"
+}

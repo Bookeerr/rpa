@@ -1,0 +1,3598 @@
+[
+  {
+    "title": "Abrir navegador",
+    "father": "use",
+    "options": [
+      "chrome",
+      "firefox",
+      "ie",
+      "safari",
+      "edge"
+    ],
+    "group": "web"
+  },
+  {
+    "title": "Abrir navegador",
+    "father": "openbrowser",
+    "options": [
+      "chrome",
+      "firefox",
+      "ie",
+      "safari",
+      "edge"
+    ],
+    "group": "web",
+    "params": [
+      {
+        "name": "option",
+        "var_type": "str",
+        "required": true,
+        "description": "Navegador a abrir",
+        "default": null
+      },
+      {
+        "name": "url",
+        "var_type": "str",
+        "required": false,
+        "description": "URL a abrir",
+        "default": null
+      },
+      {
+        "name": "id_driver",
+        "var_type": "str",
+        "required": false,
+        "description": "Identificador del navegador",
+        "default": null
+      },
+      {
+        "name": "profile",
+        "var_type": "str",
+        "required": false,
+        "description": "Ruta a la carpeta de perfil",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Cerrar navegador",
+    "father": "killdriver",
+    "options": null,
+    "group": "web",
+    "params": [],
+    "return": []
+  },
+  {
+    "title": "Abrir una URL",
+    "father": "openUrl",
+    "options": null,
+    "group": "web",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "URL a abrir",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Obtener URL actual",
+    "options": false,
+    "father": "get_current_url",
+    "group": "web",
+    "params": [],
+    "return": [
+      {
+        "name": "var_",
+        "var_type": "str",
+        "description": "Return the current url",
+        "required": true,
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Inyectar libreria Js",
+    "father": "injectjs",
+    "options": null,
+    "group": "web",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Inyecta una libreria JS al navegador",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Ejecutar archivo JS",
+    "father": "execJsFile",
+    "options": "",
+    "group": "web",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Ruta al archivo JS Script",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Ejecuta JS",
+    "father": "execJs",
+    "options": true,
+    "group": "web",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Script JS para ejecutar",
+        "default": null
+      },
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de codificación",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Nombre de la variable donde se almacenará la salida del comando."
+      }
+    ]
+  },
+  {
+    "title": "Cambiar a IFRAME",
+    "father": "swichtoframe",
+    "options": [
+      "name",
+      "id",
+      "class",
+      "xpath",
+      "tag",
+      "link text",
+      "partial link text",
+      "css selector"
+    ],
+    "group": "web",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Dato a buscar",
+        "default": null
+      },
+      {
+        "name": "option",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de dato",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Cambiar a Contenido por defecto",
+    "father": "swichtodefaultcontent",
+    "options": null,
+    "group": "web",
+    "params": [],
+    "return": []
+  },
+  {
+    "title": "Seleccionar un objeto",
+    "father": "selectObject",
+    "options": [
+      "name",
+      "id",
+      "class",
+      "xpath",
+      "tag",
+      "link text",
+      "partial link text",
+      "css selector"
+    ],
+    "group": "web"
+  },
+  {
+    "title": "Seleccionar un objeto",
+    "options": false,
+    "father": "select_object",
+    "group": "web",
+    "params": [
+      {
+        "name": "data",
+        "var_type": "str",
+        "description": "Selector del elemento que queremos seleccionar",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "data_type",
+        "var_type": "str",
+        "description": "Tipo de dato a buscar",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "wait_time",
+        "var_type": "int",
+        "description": "Tiempo máximo de espera del elemento antes de ser seleccionado",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Extraer texto",
+    "father": "textObject",
+    "options": [
+      "name",
+      "id",
+      "class",
+      "xpath",
+      "tag",
+      "link text",
+      "partial link text",
+      "css selector"
+    ],
+    "group": "web",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Dato a buscar",
+        "default": null
+      },
+      {
+        "name": "option",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de dato",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Nombre de la variable donde se almacenará la salida del comando"
+      }
+    ]
+  },
+  {
+    "title": "Extraer tabla legacy",
+    "father": "gettable",
+    "options": [
+      "name",
+      "id",
+      "class",
+      "xpath",
+      "tag",
+      "link text",
+      "partial link text",
+      "css selector"
+    ],
+    "group": "web"
+  },
+  {
+    "title": "Extraer tabla",
+    "father": "gettable_extend",
+    "options": [
+      "name",
+      "id",
+      "class",
+      "xpath",
+      "tag"
+    ],
+    "group": "web",
+    "params": [
+      {
+        "name": "identificator",
+        "var_type": "str",
+        "description": "Dato a buscar",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "option",
+        "var_type": "str",
+        "description": "Tipo de dato",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "encode",
+        "var_type": "bool",
+        "description": "Marcar si desea codificar el resultado",
+        "required": false,
+        "default": null
+      },
+      {
+        "name": "code",
+        "var_type": "str",
+        "description": "Tipo de codificación",
+        "required": false,
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "list",
+        "description": "Retorna una lista con los datos de la tabla",
+        "required": true,
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Obtener el valor de input",
+    "father": "valueobject",
+    "options": [
+      "name",
+      "id",
+      "class",
+      "xpath",
+      "tag",
+      "link text",
+      "partial link text",
+      "css selector"
+    ],
+    "group": "web",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Dato a buscar",
+        "default": null
+      },
+      {
+        "name": "option",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de dato",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable name where the output of the command will be stored"
+      }
+    ]
+  },
+  {
+    "title": "Obtener imagen de objeto",
+    "father": "getimage",
+    "options": [
+      "name",
+      "id",
+      "class",
+      "xpath",
+      "tag",
+      "link text",
+      "partial link text",
+      "css selector"
+    ],
+    "group": "web",
+    "params": [
+      {
+        "name": "search",
+        "var_type": "str",
+        "required": true,
+        "description": "Dato a buscar",
+        "default": null
+      },
+      {
+        "name": "option",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de dato",
+        "default": null
+      },
+      {
+        "name": "pathfile",
+        "var_type": "str",
+        "required": true,
+        "description": "Ruta donde guardar la imagen descargada",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Obtener atributo",
+    "options": false,
+    "father": "get_attribute",
+    "group": "web",
+    "params": [
+      {
+        "name": "data",
+        "var_type": "str",
+        "description": "Ponemos el selector del elemento del que queremos sacar el valor del atributo",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "data_type",
+        "var_type": "str",
+        "description": "Tipo de dato a buscar",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "attribute",
+        "var_type": "str",
+        "description": "Ponemos el atributo del elemento del cual queremos el valor",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "var_",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true,
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Enviar texto Web",
+    "father": "sendKeyWeb",
+    "options": [
+      "ADD",
+      "ALT",
+      "ARROW_DOWN",
+      "ARROW_LEFT",
+      "ARROW_RIGHT",
+      "ARROW_UP",
+      "BACKSPACE",
+      "BACK_SPACE",
+      "CANCEL",
+      "CLEAR",
+      "COMMAND",
+      "CONTROL",
+      "DECIMAL",
+      "DELETE",
+      "DIVIDE",
+      "DOWN",
+      "END",
+      "ENTER",
+      "EQUALS",
+      "ESCAPE",
+      "F1",
+      "F10",
+      "F11",
+      "F12",
+      "F2",
+      "F3",
+      "F4",
+      "F5",
+      "F6",
+      "F7",
+      "F8",
+      "F9",
+      "HELP",
+      "HOME",
+      "INSERT",
+      "LEFT",
+      "LEFT_ALT",
+      "LEFT_CONTROL",
+      "LEFT_SHIFT",
+      "META",
+      "MULTIPLY",
+      "NULL",
+      "NUMPAD0",
+      "NUMPAD1",
+      "NUMPAD2",
+      "NUMPAD3",
+      "NUMPAD4",
+      "NUMPAD5",
+      "NUMPAD6",
+      "NUMPAD7",
+      "NUMPAD8",
+      "NUMPAD9",
+      "PAGE_DOWN",
+      "PAGE_UP",
+      "PAUSE",
+      "RETURN",
+      "RIGHT",
+      "SEMICOLON",
+      "SEPARATOR",
+      "SHIFT",
+      "SPACE",
+      "SUBTRACT",
+      "TAB",
+      "UP"
+    ],
+    "group": "web"
+  },
+  {
+    "title": "Enviar texto Web",
+    "options": false,
+    "father": "sendkey_web",
+    "group": "web",
+    "params": [
+      {
+        "name": "data",
+        "var_type": "str",
+        "description": "Ponemos el selector del elemento al que queremos enviar la clave.",
+        "required": false,
+        "default": null
+      },
+      {
+        "name": "data_type",
+        "var_type": "str",
+        "description": "Tipo de dato a buscar",
+        "required": false,
+        "default": null
+      },
+      {
+        "name": "wait_time",
+        "var_type": "int",
+        "description": "Tiempo máximo de espera del elemento antes de ser seleccionado",
+        "required": false,
+        "default": null
+      },
+      {
+        "name": "text",
+        "var_type": "str",
+        "description": "Texto a enviar al elemento seleccionado",
+        "required": false,
+        "default": null
+      },
+      {
+        "name": "special",
+        "var_type": "str",
+        "description": "Tecla especial a enviar",
+        "required": false,
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Click en objeto",
+    "father": "clickWeb",
+    "options": [
+      "name",
+      "id",
+      "class",
+      "xpath",
+      "tag",
+      "link text",
+      "partial link text",
+      "css selector"
+    ],
+    "group": "web"
+  },
+  {
+    "title": "Click en objecto",
+    "options": false,
+    "father": "click_web",
+    "group": "web",
+    "params": [
+      {
+        "name": "data",
+        "var_type": "str",
+        "description": "Ponemos el selector del elemento en el que queremos hacer clic.",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "data_type",
+        "var_type": "str",
+        "description": "Tipo de dato a buscar",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "before",
+        "var_type": "int",
+        "description": "Tiempo de espera antes de buscar el elemento.",
+        "required": false,
+        "default": null
+      },
+      {
+        "name": "wait_time",
+        "var_type": "int",
+        "description": "Tiempo máximo de espera del elemento antes de ser seleccionado",
+        "required": false,
+        "default": null
+      },
+      {
+        "name": "after",
+        "var_type": "int",
+        "description": "Tiempo de espera después de hacer clic en el elemento.",
+        "required": false,
+        "default": null
+      },
+      {
+        "name": "move",
+        "var_type": "bool",
+        "description": "Mover al elemento para hacer clic",
+        "required": false,
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Mover hasta element",
+    "options": false,
+    "father": "move_to_element",
+    "group": "web",
+    "params": [
+      {
+        "name": "data",
+        "var_type": "str",
+        "description": "Ponemos el selector del elemento que queremos ver.",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "data_type",
+        "var_type": "str",
+        "description": "Tipo de dato a buscar",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Subir Archivo",
+    "father": "upload_file",
+    "group": "web",
+    "params": [
+      {
+        "name": "data",
+        "var_type": "str",
+        "description": "Ponemos el selector del elemento donde se subirá el archivo.",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "data_type",
+        "var_type": "str",
+        "description": "Tipo de dato a buscar",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "file_path",
+        "var_type": "str",
+        "description": "Ruta del archivo a subir",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Obtener código HTML",
+    "father": "getcode",
+    "group": "web",
+    "options": "",
+    "params": [],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado"
+      }
+    ]
+  },
+  {
+    "title": "Contar ventanas",
+    "father": "countwindow",
+    "options": "",
+    "group": "web",
+    "params": [],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado"
+      }
+    ]
+  },
+  {
+    "title": "Cerrar ventana",
+    "father": "closewindow",
+    "options": [
+      "last"
+    ],
+    "group": "web",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Dato a buscar",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Obtener handle de ventana",
+    "father": "getWindowHandle",
+    "options": [],
+    "group": "web",
+    "params": [],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado"
+      }
+    ]
+  },
+  {
+    "title": "Obtener titulo de ventana",
+    "father": "getWindowTitle",
+    "options": [],
+    "group": "web",
+    "params": [],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado"
+      }
+    ]
+  },
+  {
+    "title": "Cambiar a ventana",
+    "father": "switchToWindow",
+    "options": [
+      "first",
+      "last",
+      2,
+      3,
+      4
+    ],
+    "group": "web",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Dato a buscar",
+        "default": null
+      },
+      {
+        "name": "option",
+        "var_type": "str",
+        "required": true,
+        "description": "Indice",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Cambiar de Navegador",
+    "father": "switchToNavigator",
+    "options": [
+      "default"
+    ],
+    "group": "web",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Dato a buscar",
+        "default": null
+      },
+      {
+        "name": "option",
+        "var_type": "str",
+        "required": true,
+        "description": "Por defecto",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Maximizar",
+    "father": "maximize",
+    "options": null,
+    "group": "web",
+    "params": [],
+    "return": []
+  },
+  {
+    "title": "Minimizar",
+    "father": "minimize",
+    "options": null,
+    "group": "web",
+    "params": [],
+    "return": []
+  },
+  {
+    "title": "Esperar por Objeto",
+    "father": "waitforobject",
+    "group": "web",
+    "options": [
+      "name",
+      "id",
+      "class",
+      "xpath",
+      "tag"
+    ],
+    "params": [
+      {
+        "name": "object",
+        "var_type": "str",
+        "required": true,
+        "description": "Dato a buscar",
+        "default": null
+      },
+      {
+        "name": "option",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de dato",
+        "default": null
+      },
+      {
+        "name": "wait_time",
+        "var_type": "int",
+        "required": true,
+        "description": "Tiempo máximo de espera del elemento",
+        "default": null
+      },
+      {
+        "name": "wait_for",
+        "var_type": "str",
+        "required": true,
+        "description": "Acción del elemento a esperar",
+        "default": null
+      },
+      {
+        "name": "before",
+        "var_type": "int",
+        "required": true,
+        "description": "Tiempo de espera antes de buscar el elemento",
+        "default": null
+      },
+      {
+        "name": "after",
+        "var_type": "int",
+        "required": true,
+        "description": "Tiempo de espera después de hacer clic en el elemento",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado"
+      }
+    ]
+  },
+  {
+    "title": "Esperar por objeto Legacy",
+    "father": "waitObjectWebByName",
+    "options": [],
+    "group": "web"
+  },
+  {
+    "title": "Esperar objeto por 'Name'",
+    "father": "waitObjectWebByName",
+    "options": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      10,
+      15,
+      20,
+      50,
+      90,
+      120
+    ],
+    "group": "web"
+  },
+  {
+    "title": "Esperar objeto por 'Id'",
+    "father": "waitObjectWebById",
+    "options": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      10,
+      15,
+      20,
+      50,
+      90,
+      120
+    ],
+    "group": "web"
+  },
+  {
+    "title": "Esperar objeto por 'Class'",
+    "father": "waitObjectWebByClass",
+    "options": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      10,
+      15,
+      20,
+      50,
+      90,
+      120
+    ],
+    "group": "web"
+  },
+  {
+    "title": "Esperar objeto por 'LinkText'",
+    "father": "waitObjectWebByText",
+    "options": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      10,
+      15,
+      20,
+      50,
+      90,
+      120
+    ],
+    "group": "web"
+  },
+  {
+    "title": "Esperar objeto por 'XPath'",
+    "father": "waitObjectWebByXPath",
+    "options": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      10,
+      15,
+      20,
+      50,
+      90,
+      120
+    ],
+    "group": "web"
+  },
+  {
+    "title": "Esperar",
+    "father": "wait",
+    "options": "",
+    "group": "system",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Segundos para dormir la ejecución",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Asignar Variable",
+    "father": "setVar",
+    "options": [
+      {
+        "visible": false,
+        "title": "Ayer DD-MM-YYYY",
+        "option": "yesterdayDD-MM-YYYY"
+      },
+      {
+        "visible": false,
+        "title": "Ayer DD/MM/YYYY",
+        "option": "yesterdayDD/MM/YYYY"
+      },
+      {
+        "visible": false,
+        "title": "Hoy DD-MM-YYYY",
+        "option": "todayDD-MM-YYYY"
+      },
+      {
+        "visible": false,
+        "title": "Hoy DD/MM/YYYY",
+        "option": "todayDD/MM/YYYY"
+      },
+      {
+        "visible": false,
+        "title": "Hoy YYYY-MM-DD",
+        "option": "todayYYYY-MM-DD"
+      },
+      {
+        "visible": false,
+        "title": "Ahora hh:mm:ss",
+        "option": "NOWHH-MM-SS"
+      },
+      {
+        "visible": false,
+        "title": "Ahora DD-MM-YYYY hh:mm:ss",
+        "option": "todayDD-MM-YYYY_HH-MM-SS"
+      }
+    ],
+    "group": "system",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Datos para asignar a la variable",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado"
+      }
+    ]
+  },
+  {
+    "title": "Asignar Múltiples Variables",
+    "father": "set_multiple_vars",
+    "options": [],
+    "group": "system",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "list",
+        "required": true,
+        "description": "Listado con la data a asignar",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Último Estado",
+    "father": "last_status",
+    "options": "",
+    "group": "system",
+    "params": [],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado"
+      }
+    ]
+  },
+  {
+    "title": "Listar Procesos",
+    "father": "get_processes",
+    "options": "",
+    "group": "system",
+    "params": [],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado"
+      }
+    ]
+  },
+  {
+    "title": "Obtener Proceso",
+    "father": "get_process",
+    "options": "",
+    "group": "system",
+    "params": [
+      {
+        "name": "condition",
+        "var_type": "enum",
+        "required": true,
+        "description": "Condition to filter the processes. Can be PID or Name",
+        "default": null
+      },
+      {
+        "name": "value",
+        "var_type": "str",
+        "required": true,
+        "description": "Value to filter the processes. Can be PID or Name",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable name where the output of the command will be stored"
+      }
+    ]
+  },
+  {
+    "title": "Detener Proceso",
+    "father": "kill_process",
+    "options": [
+      "auto",
+      "pid",
+      "name"
+    ],
+    "group": "system",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Datos del proceso para matar",
+        "default": null
+      },
+      {
+        "name": "option",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de dato",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Mensaje Log",
+    "father": "log_message",
+    "options": [
+      "trace",
+      "info",
+      "warn",
+      "error",
+      "fatal"
+    ],
+    "group": "system",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Mensaje a loggear",
+        "default": null
+      },
+      {
+        "name": "option",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de nivel de registro",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Log Message to File",
+    "father": "log_message_file",
+    "options": "",
+    "group": "system",
+    "params": [
+      {
+        "name": "log_file",
+        "var_type": "str",
+        "description": "Ruta del archivo donde se escribirán los registros.",
+        "required": true
+      },
+      {
+        "name": "log_message",
+        "var_type": "str",
+        "description": "Mensaje para guardar en el archivo de registro.",
+        "required": true
+      },
+      {
+        "name": "log_level",
+        "var_type": "str",
+        "description": "Nivel a asignar al mensaje de registro.",
+        "required": false
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Crear Error",
+    "father": "raise_exception",
+    "options": [
+      "SystemError",
+      "RocketbotError",
+      "BusinessError",
+      "ValidationError"
+    ],
+    "group": "system",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Mensaje de error a producir",
+        "default": null
+      },
+      {
+        "name": "option",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de excepción",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Ingreso de Información web",
+    "father": "getinputweb",
+    "group": "web",
+    "options": ""
+  },
+  {
+    "title": "Ejecutar Aplicación",
+    "father": "startapp",
+    "options": "",
+    "group": "system",
+    "params": [
+      {
+        "name": "path",
+        "var_type": "str",
+        "required": true,
+        "description": "Ruta de la aplicación a ejecutar",
+        "default": null
+      },
+      {
+        "name": "tipo",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de ejecución",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado"
+      }
+    ]
+  },
+  {
+    "title": "Ejecutar archivo",
+    "father": "startfile",
+    "options": "",
+    "group": "system",
+    "params": [
+      {
+        "name": "path",
+        "var_type": "str",
+        "required": true,
+        "description": "Ruta del archivo a ejecutar",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Obtener contraseña",
+    "options": false,
+    "father": "get_password",
+    "group": "system",
+    "params": [
+      {
+        "name": "system",
+        "var_type": "str",
+        "description": "Dónde buscar la contraseña",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "username",
+        "var_type": "str",
+        "description": "Nombre de usuario para buscar la contraseña",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "assign_to",
+        "var_type": "str",
+        "description": "Devuelve la contraseña a esta variable",
+        "required": true,
+        "default": ""
+      }
+    ]
+  },
+  {
+    "title": "Configurar contraseña",
+    "options": false,
+    "father": "set_password",
+    "group": "system",
+    "params": [
+      {
+        "name": "system",
+        "var_type": "str",
+        "description": "Dónde configurar o actualizar la contraseña",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "username",
+        "var_type": "str",
+        "description": "Nombre de usuario para agregar o actualizar la contraseña",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "password",
+        "var_type": "str",
+        "description": "Contraseña para establecer o actualizar el nombre de usuario",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Parametros de linea de comandos",
+    "options": false,
+    "father": "get_all_arguments",
+    "group": "system",
+    "params": [],
+    "return": [
+      {
+        "name": "assign_to",
+        "var_type": "dict",
+        "description": "Variable where the result will be saved",
+        "required": true,
+        "default": ""
+      }
+    ]
+  },
+  {
+    "title": "Eliminar dato en array",
+    "options": false,
+    "father": "deleteArray",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "array_",
+        "var_type": "list",
+        "description": "Lista donde se eliminará el elemento",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "option_",
+        "var_type": "str",
+        "description": "Opción de eliminar por valor o posición.",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "value_",
+        "var_type": "str",
+        "description": "Valor o posición del elemento a eliminar",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "var_",
+        "var_type": "list",
+        "description": "Nueva lista sin el elemento eliminado",
+        "required": true,
+        "default": ""
+      }
+    ]
+  },
+  {
+    "title": "Agregar dato en array",
+    "options": false,
+    "father": "addArray",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "array_",
+        "var_type": "list",
+        "description": "Lista donde se agregará el artículo",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "position_",
+        "var_type": "int",
+        "description": "Posición donde se agregará el elemento",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "value_",
+        "var_type": "str",
+        "description": "Valor a agregar",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "var_",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true,
+        "default": ""
+      }
+    ]
+  },
+  {
+    "title": "Modifica dato en array",
+    "options": false,
+    "father": "setItem",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "array_",
+        "var_type": "list",
+        "description": "List to be modified",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "position_",
+        "var_type": "int",
+        "description": "Position of the element to modify",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "value_",
+        "var_type": "str",
+        "description": "New value for the element",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "var_",
+        "var_type": "list",
+        "description": "New list with the modified element",
+        "required": true,
+        "default": ""
+      }
+    ]
+  },
+  {
+    "title": "Obtener dato de array",
+    "options": false,
+    "father": "getElement",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "array_",
+        "var_type": "list",
+        "description": "Lista para obtener datos",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "position_",
+        "var_type": "int",
+        "description": "Posición del elemento a obtener",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "var_",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true,
+        "default": ""
+      }
+    ]
+  },
+  {
+    "title": "Convertir lista a string",
+    "options": false,
+    "father": "joinArray",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "array_",
+        "var_type": "list",
+        "description": "List of elements to join",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "delimiter_",
+        "var_type": "str",
+        "description": "Delimitador para unir los elementos.",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "var_",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true,
+        "default": ""
+      }
+    ]
+  },
+  {
+    "title": "Filtrar",
+    "options": false,
+    "father": "filter",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "array_",
+        "var_type": "list",
+        "description": "Lista de elementos a filtrar",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "condition",
+        "var_type": "str",
+        "description": "Condición de filtrado",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "data",
+        "var_type": "str",
+        "description": "Filtrar valor condicional",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "var_",
+        "var_type": "list",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true,
+        "default": ""
+      }
+    ]
+  },
+  {
+    "title": "Contar elementos",
+    "options": false,
+    "father": "length",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "array_",
+        "var_type": "list",
+        "description": "Lista de elementos a contar",
+        "required": true,
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "var_",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true,
+        "default": ""
+      }
+    ]
+  },
+  {
+    "title": "Extraer texto",
+    "options": false,
+    "father": "extract",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "string",
+        "var_type": "str",
+        "description": "Texto de donde extraer",
+        "required": true
+      },
+      {
+        "name": "start",
+        "var_type": "str",
+        "description": "Comienza después del texto.",
+        "required": false
+      },
+      {
+        "name": "start_index",
+        "var_type": "int",
+        "description": "Índice del inicio del texto a extraer",
+        "required": false
+      },
+      {
+        "name": "end",
+        "var_type": "str",
+        "description": "Termina antes del texto.",
+        "required": false
+      },
+      {
+        "name": "end_index",
+        "var_type": "int",
+        "description": "Índice del final del texto a extraer",
+        "required": false
+      },
+      {
+        "name": "strip",
+        "var_type": "bool",
+        "description": "Eliminar espacios al principio y al final de la cadena.",
+        "required": false
+      },
+      {
+        "name": "line_break",
+        "var_type": "bool",
+        "description": "Eliminar saltos de línea",
+        "required": false
+      },
+      {
+        "name": "capitalize",
+        "var_type": "bool",
+        "description": "Verdadero si desea poner en mayúscula la primera letra de cada palabra",
+        "required": false
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true
+      }
+    ]
+  },
+  {
+    "title": "Obtener similitud",
+    "options": false,
+    "father": "diff_ratio",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "str1",
+        "var_type": "str",
+        "description": "Primera cadena para comparar",
+        "required": true
+      },
+      {
+        "name": "str2",
+        "var_type": "str",
+        "description": "Segunda cadena para comparar",
+        "required": true
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true
+      }
+    ]
+  },
+  {
+    "title": "Reemplazar carácteres",
+    "options": false,
+    "father": "replace",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "var",
+        "var_type": "str",
+        "description": "Cadena para reemplazar subcadena",
+        "required": true
+      },
+      {
+        "name": "old",
+        "var_type": "str",
+        "description": "Subcadena antigua para reemplazar",
+        "required": true
+      },
+      {
+        "name": "new",
+        "var_type": "str",
+        "description": "Nueva subcadena",
+        "required": true
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true
+      }
+    ]
+  },
+  {
+    "title": "Convertir a Lista",
+    "options": false,
+    "father": "split",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "var",
+        "var_type": "str",
+        "description": "Texto a separar",
+        "required": true
+      },
+      {
+        "name": "delimiter",
+        "var_type": "str",
+        "description": "Delimitador para dividir el texto",
+        "required": true
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "list",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true
+      }
+    ]
+  },
+  {
+    "title": "Invertir",
+    "options": false,
+    "father": "reverse",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "string",
+        "var_type": "str",
+        "description": "Texto a invertir",
+        "required": true
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true
+      }
+    ]
+  },
+  {
+    "title": "Agregar elemento",
+    "options": false,
+    "father": "add_dict",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "dict",
+        "var_type": "dict",
+        "description": "Diccionario para agregar el elemento",
+        "required": true
+      },
+      {
+        "name": "key",
+        "var_type": "str",
+        "description": "Clave para agregar al diccionario",
+        "required": true
+      },
+      {
+        "name": "value",
+        "var_type": "str",
+        "description": "Valor para agregar al diccionario",
+        "required": true
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "dict",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true
+      }
+    ]
+  },
+  {
+    "title": "Eliminar elemento",
+    "options": false,
+    "father": "delete_dict",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "dict",
+        "var_type": "str",
+        "description": "Diccionario donde eliminar un elemento",
+        "required": true
+      },
+      {
+        "name": "key",
+        "var_type": "str",
+        "description": "Clave para eliminar del diccionario",
+        "required": true
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "dict",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true
+      }
+    ]
+  },
+  {
+    "title": "Buscar elemento",
+    "options": false,
+    "father": "find_dict",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "dict",
+        "var_type": "dict",
+        "description": "Diccionario donde buscar el elemento",
+        "required": true
+      },
+      {
+        "name": "path_selector",
+        "var_type": "str",
+        "description": "Ruta para encontrar el elemento. Ejemplo: 'path/to/value' para {'path': {'to': {'value': 'result'}}}",
+        "required": true
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true
+      }
+    ]
+  },
+  {
+    "title": "JSON a Diccionario",
+    "options": false,
+    "father": "json_to_dict",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "json_path",
+        "var_type": "str",
+        "description": "Path to the JSON file",
+        "required": false
+      },
+      {
+        "name": "json_str",
+        "var_type": "str",
+        "description": "JSON string",
+        "required": false
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "dict",
+        "description": "Dictionary with the JSON data",
+        "required": true
+      }
+    ]
+  },
+  {
+    "title": "Diccionario a JSON",
+    "options": false,
+    "father": "dict_to_json",
+    "group": "datatransform",
+    "params": [
+      {
+        "name": "dict",
+        "var_type": "dict",
+        "description": "Diccionario para convertir en JSON",
+        "required": true
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "description": "Variable donde se almacenará el resultado",
+        "required": true
+      }
+    ]
+  },
+  {
+    "title": "Ejecutar archivo Python",
+    "father": "execPython",
+    "options": null,
+    "group": "scripts"
+  },
+  {
+    "title": "Execute  Python",
+    "father": "execScriptPython",
+    "options": "",
+    "group": "scripts",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Código Python a ejecutar",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Ejecuta JSON RocketBot",
+    "father": "execRocketBot",
+    "options": "",
+    "group": "scripts"
+  },
+  {
+    "title": "Ejecutar archivo de script de Visual Basic",
+    "options": false,
+    "father": "execvba",
+    "group": "scripts",
+    "params": [
+      {
+        "name": "file",
+        "var_type": "str",
+        "description": "Ruta al archivo VBS",
+        "required": false
+      },
+      {
+        "name": "args",
+        "var_type": "list",
+        "description": "Lista de argumentos para pasar al script",
+        "required": false
+      },
+      {
+        "name": "code",
+        "var_type": "str",
+        "description": "Tipo de codificación para decodificar el resultado",
+        "required": false
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "required": false,
+        "description": "Nombre de la variable donde se almacenará la salida del comando",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Ejecutar archivo Powershell",
+    "options": false,
+    "father": "execps1",
+    "group": "scripts",
+    "params": [
+      {
+        "name": "file",
+        "var_type": "str",
+        "description": "Ruta al archivo PS1",
+        "required": false
+      },
+      {
+        "name": "args",
+        "var_type": "str",
+        "description": "Lista de argumentos para pasar al script.",
+        "required": false
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Ejecuta otro script RocketBot",
+    "father": "execRocketBotDB",
+    "options": "",
+    "group": "scripts",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre del robot a ejecutar",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Ejecutar robot Rocketbot (expose)",
+    "father": "execRocketBotDBExpose",
+    "options": "",
+    "group": "scripts",
+    "params": [
+      {
+        "name": "vars",
+        "var_type": "dict",
+        "required": false,
+        "description": "Variables que se le pasaran al robot",
+        "default": null
+      },
+      {
+        "name": "robot",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre del robot a ejecutar",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "required": false,
+        "description": "Variable donde se guardara el resultado de la ejecucion del robot",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Retornar informacion",
+    "father": "return",
+    "options": "",
+    "group": "system",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Informacion a retornar al robot padre",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Detener este robot",
+    "father": "stop",
+    "options": null,
+    "group": "scripts",
+    "params": [],
+    "return": []
+  },
+  {
+    "title": "Detener todo y Salir",
+    "father": "stop_all",
+    "options": null,
+    "group": "scripts",
+    "params": [],
+    "return": []
+  },
+  {
+    "title": "Mover Mouse",
+    "father": "mouseMoveTo",
+    "options": "",
+    "group": "desktop",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Posición donde se movera el mouse (x,y)",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Mouse Scroll",
+    "father": "scroll",
+    "options": "",
+    "group": "desktop",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "int",
+        "required": true,
+        "description": "Numero de clicks a hacer scroll",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Obtener coordenadas del Mouse",
+    "father": "getmousepos",
+    "options": "",
+    "group": "desktop",
+    "params": [
+      {
+        "name": "seconds",
+        "var_type": "int",
+        "required": false,
+        "description": "Segundos de espera para obtener la posición del mouse",
+        "default": 0
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "required": true,
+        "description": "Variable donde se asignara el resultado",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Mouse Click",
+    "father": "MouseClick",
+    "options": [
+      "left",
+      "right",
+      "middle"
+    ],
+    "group": "desktop",
+    "params": [
+      {
+        "name": "option",
+        "var_type": "str",
+        "required": true,
+        "description": "Botón a hacer click (left, right, middle)",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Alerta",
+    "father": "alert",
+    "options": "",
+    "group": "desktop",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Mensaje a mostrar en la alerta",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Notificación",
+    "father": "notify",
+    "options": "",
+    "group": "desktop",
+    "params": [
+      {
+        "name": "icon",
+        "var_type": "str",
+        "required": false,
+        "description": "Ruta del icono de la notificación",
+        "default": null
+      },
+      {
+        "name": "title",
+        "var_type": "str",
+        "required": false,
+        "description": "Título de la notificación",
+        "default": null
+      },
+      {
+        "name": "message",
+        "var_type": "str",
+        "required": false,
+        "description": "Mensaje de la notificación",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Captura de Pantalla",
+    "father": "getscreenshot",
+    "options": "",
+    "group": "desktop",
+    "params": [
+      {
+        "name": "path",
+        "var_type": "str",
+        "required": true,
+        "description": "Ruta donde guardar la captura",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Enviar tecla",
+    "father": "sendKey",
+    "options": [
+      "ADD",
+      "ALT",
+      "ARROW_DOWN",
+      "ARROW_LEFT",
+      "ARROW_RIGHT",
+      "ARROW_UP",
+      "BACKSPACE",
+      "BACK_SPACE",
+      "CANCEL",
+      "CLEAR",
+      "COMMAND",
+      "CONTROL",
+      "DECIMAL",
+      "DELETE",
+      "DIVIDE",
+      "DOWN",
+      "END",
+      "ENTER",
+      "EQUALS",
+      "ESCAPE",
+      "F1",
+      "F10",
+      "F11",
+      "F12",
+      "F2",
+      "F3",
+      "F4",
+      "F5",
+      "F6",
+      "F7",
+      "F8",
+      "F9",
+      "HELP",
+      "HOME",
+      "INSERT",
+      "LEFT",
+      "LEFT_ALT",
+      "LEFT_CONTROL",
+      "LEFT_SHIFT",
+      "META",
+      "MULTIPLY",
+      "NULL",
+      "NUMPAD0",
+      "NUMPAD1",
+      "NUMPAD2",
+      "NUMPAD3",
+      "NUMPAD4",
+      "NUMPAD5",
+      "NUMPAD6",
+      "NUMPAD7",
+      "NUMPAD8",
+      "NUMPAD9",
+      "PAGE_DOWN",
+      "PAGE_UP",
+      "PAUSE",
+      "RETURN",
+      "RIGHT",
+      "SEMICOLON",
+      "SEPARATOR",
+      "SHIFT",
+      "SPACE",
+      "SUBTRACT",
+      "TAB",
+      "UP"
+    ],
+    "group": "desktop"
+  },
+  {
+    "title": "Enviar Tecla",
+    "father": "send_keys",
+    "options": "",
+    "group": "desktop",
+    "params": [
+      {
+        "name": "text",
+        "var_type": "str",
+        "required": false,
+        "description": "Texto a escribir",
+        "default": null
+      },
+      {
+        "name": "key",
+        "var_type": "str",
+        "required": false,
+        "description": "Tecla especial a enviar",
+        "default": null
+      },
+      {
+        "name": "repeat",
+        "var_type": "int",
+        "required": false,
+        "description": "Cantidad de veces a repetir",
+        "default": 1
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "IF",
+    "father": "evaluateIf",
+    "options": [],
+    "group": "logic",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "bool",
+        "required": true,
+        "description": "Comando lógico a evaluar",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "While",
+    "father": "evaluatewhile",
+    "options": [],
+    "group": "logic",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Comando lógico a evaluar",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Break",
+    "father": "break",
+    "options": null,
+    "group": "logic",
+    "params": [],
+    "return": []
+  },
+  {
+    "title": "For",
+    "father": "for",
+    "options": [],
+    "group": "logic",
+    "params": [
+      {
+        "name": "iterable",
+        "var_type": "list",
+        "required": true,
+        "description": "Elemento iterable a recorrer",
+        "default": null
+      },
+      {
+        "name": "var",
+        "var_type": "str",
+        "required": false,
+        "description": "Variable que almacena el valor del elemento iterable",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Try Catch",
+    "father": "trycatch",
+    "options": null,
+    "group": "logic",
+    "params": [],
+    "return": []
+  },
+  {
+    "title": "Grupo",
+    "father": "group",
+    "options": [],
+    "group": "logic",
+    "params": [],
+    "return": []
+  },
+  {
+    "title": "Guardar texto en archivo",
+    "father": "savedatafile",
+    "options": "",
+    "group": "file",
+    "params": [
+      {
+        "name": "file_name",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre del archivo",
+        "default": null
+      },
+      {
+        "name": "type",
+        "var_type": "str",
+        "required": true,
+        "description": "Opción para elegir escribir en una nueva línea o sobrescribir el contenido del archivo",
+        "default": null
+      },
+      {
+        "name": "new_line",
+        "var_type": "bool",
+        "required": false,
+        "description": "Agregar un salto de línea después de escribir el texto",
+        "default": false
+      },
+      {
+        "name": "file_data",
+        "var_type": "str",
+        "required": true,
+        "description": "Datos a escribir en el archivo",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Mover o renombrar archivo",
+    "father": "movefile",
+    "options": "",
+    "group": "file",
+    "params": [
+      {
+        "name": "from",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre del archivo que deseas mover o renombrar",
+        "default": null
+      },
+      {
+        "name": "to",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre del archivo que deseas mover o renombrar",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "getvar",
+        "var_type": "bool",
+        "required": false,
+        "description": "Indica si el archivo fue movido correctamente",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Copiar archivo",
+    "father": "copyfile",
+    "options": "",
+    "group": "file",
+    "params": [
+      {
+        "name": "from",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre del archivo a copiar",
+        "default": null
+      },
+      {
+        "name": "to",
+        "var_type": "str",
+        "required": true,
+        "description": "Ruta donde deseas copiar el archivo",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "getvar",
+        "var_type": "bool",
+        "required": false,
+        "description": "Indica si el archivo fue copiado correctamente",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Borrar archivo",
+    "father": "deletefile",
+    "options": "",
+    "group": "file",
+    "params": [
+      {
+        "name": "from",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre del archivo a borrar",
+        "default": null
+      },
+      {
+        "name": "to",
+        "var_type": "str",
+        "required": false,
+        "description": "",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "getvar",
+        "var_type": "str",
+        "required": false,
+        "description": "Indica si el archivo fue borrado correctamente",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Listar archivos",
+    "father": "listfiles",
+    "options": "",
+    "group": "file",
+    "params": [
+      {
+        "name": "path",
+        "var_type": "str",
+        "required": true,
+        "description": "Ruta de la carpeta con los archivos",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "list",
+        "required": true,
+        "description": "Variable donde almacenar resultado",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Listar archivos",
+    "father": "files",
+    "options": "",
+    "group": "file"
+  },
+  {
+    "title": "Listar Carpetas",
+    "father": "listfolders",
+    "options": "",
+    "group": "file",
+    "params": [
+      {
+        "name": "path",
+        "var_type": "str",
+        "required": true,
+        "description": "Ruta de la carpeta que deseas listar",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "list",
+        "required": true,
+        "description": "Variable donde almacenar resultado",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Listar Carpetas",
+    "father": "folders",
+    "options": "",
+    "group": "file"
+  },
+  {
+    "title": "Enviar a papelera",
+    "father": "trashfile",
+    "options": "",
+    "group": "file",
+    "params": [
+      {
+        "name": "path",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre del archivo a enviar a la papelera de reciclaje",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "getvar",
+        "var_type": "str",
+        "required": false,
+        "description": "Indica si el archivo fue enviado a la papelera de reciclaje correctamente",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Enviar a papelera ",
+    "father": "trashfile",
+    "options": "",
+    "group": "file"
+  },
+  {
+    "title": "Comprimir archivo en ZIP",
+    "father": "zipfile",
+    "options": "",
+    "group": "file",
+    "params": [
+      {
+        "name": "from",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre y ruta del archivo o carpeta que deseas comprimir",
+        "default": null
+      },
+      {
+        "name": "to",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre y ruta del archivo ZIP que deseas crear",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "getvar",
+        "var_type": "bool",
+        "required": false,
+        "description": "Indica si el archivo ZIP fue generado correctamente",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Descomprimir ZIP",
+    "father": "unzipfile",
+    "options": "",
+    "group": "file",
+    "params": [
+      {
+        "name": "from",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre y ruta del archivo ZIP que deseas descomprimir",
+        "default": null
+      },
+      {
+        "name": "to",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre y ruta de la carpeta de destino donde se extraerán los archivos",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "getvar",
+        "var_type": "bool",
+        "required": false,
+        "description": "Indica si el archivo ZIP se pudo descomprimir correctamente",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Extraer texto de PDF",
+    "father": "pdftext",
+    "options": "",
+    "group": "pdf",
+    "params": [
+      {
+        "name": "file",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre y ruta del archivo PDF del que deseas extraer texto.",
+        "default": null
+      },
+      {
+        "name": "page",
+        "var_type": "str",
+        "required": false,
+        "description": "Puedes especificar el número de página del que deseas extraer texto. Si deseas extraer texto de todas las páginas, deja este parámetro vacío.",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "getvar",
+        "var_type": "dict",
+        "required": true,
+        "description": "Variable donde se almacenará el texto extraído en formato diccionario.",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Convertir imagen a PDF",
+    "father": "pdfimage",
+    "options": "",
+    "group": "pdf"
+  },
+  {
+    "title": "Agregar imagen a PDF",
+    "father": "pdfaddimage",
+    "options": "",
+    "group": "pdf"
+  },
+  {
+    "title": "Nuevo xlsx",
+    "father": "newxlsx",
+    "options": "",
+    "group": "xlsx",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": false,
+        "description": "Identificador del archivo",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "getvar",
+        "var_type": "bool",
+        "required": false,
+        "description": "Variable donde se guardara el resultado de la operacion",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Abrir xlsx",
+    "father": "readxlsx",
+    "options": "",
+    "group": "xlsx",
+    "params": [
+      {
+        "name": "file_path",
+        "var_type": "str",
+        "required": true,
+        "description": "Ruta del archivo",
+        "default": null
+      },
+      {
+        "name": "identificator",
+        "var_type": "str",
+        "required": false,
+        "description": "Identificador del archivo",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "getvar",
+        "var_type": "str",
+        "required": false,
+        "description": "Variable donde se guardara el resultado de la operacion",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Guardar xlsx",
+    "father": "savexlsx",
+    "options": "",
+    "group": "xlsx",
+    "params": [
+      {
+        "name": "path",
+        "var_type": "str",
+        "required": true,
+        "description": "Ruta donde guardar el archivo XLSX",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "required": false,
+        "description": "Variable donde almacenar resultado",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Obtener Hojas",
+    "father": "getsheets",
+    "options": "",
+    "group": "xlsx",
+    "params": [],
+    "return": [
+      {
+        "name": "var",
+        "var_type": "list",
+        "required": true,
+        "description": "Devuelve una lista de todos los nombres de hoja en un libro de trabajo como variables de cadena, ordenadas por su índice.",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Cambiar de Hoja",
+    "father": "setsheet",
+    "options": "",
+    "group": "xlsx",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre de la hoja",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Cambiar de Archivo",
+    "father": "switchtoexcel",
+    "options": "",
+    "group": "xlsx",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Identificador de archivo",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Contar Filas",
+    "father": "getrows",
+    "options": "",
+    "group": "xlsx",
+    "params": [],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "int",
+        "required": true,
+        "description": "Nombre de la variable donde se almacenará el resultado.",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Contar Columnas",
+    "father": "getcols",
+    "options": "",
+    "group": "xlsx",
+    "params": [],
+    "return": [
+      {
+        "name": "result",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre de la variable donde se almacenará el resultado.",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Obtener celda",
+    "father": "getcell",
+    "options": "",
+    "group": "xlsx",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Celda o rango de celdas a obtener",
+        "default": null
+      }
+    ],
+    "return": [
+      {
+        "name": "getvar",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre de la variable donde se almacenará el resultado.",
+        "default": null
+      }
+    ]
+  },
+  {
+    "title": "Escribir Celda",
+    "father": "setcell",
+    "options": "",
+    "group": "xlsx",
+    "params": [
+      {
+        "name": "command",
+        "var_type": "str",
+        "required": true,
+        "description": "Celda o rango de celdas a escribir",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Click en imagen",
+    "father": "clickimage",
+    "options": [
+      "Center",
+      "Top",
+      "Center Top",
+      "Right",
+      "Center Right",
+      "Bottom",
+      "Center Bottom",
+      "Left",
+      "Center Left"
+    ],
+    "group": "virtual",
+    "params": [
+      {
+        "name": "ref",
+        "var_type": "dict",
+        "required": true,
+        "description": "Referencia de la imagen a buscar",
+        "default": null
+      },
+      {
+        "name": "point",
+        "var_type": "dict",
+        "required": true,
+        "description": "Punto donde se hará click en la imagen",
+        "default": "null"
+      },
+      {
+        "name": "accuracy",
+        "var_type": "float",
+        "required": true,
+        "description": "Precisión de la búsqueda de la imagen",
+        "default": 0.7
+      },
+      {
+        "name": "clicks",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de click a realizar",
+        "default": "simple"
+      },
+      {
+        "name": "gray_scale",
+        "var_type": "int",
+        "required": true,
+        "description": "Buscar imagen en escala de grises",
+        "default": 1
+      },
+      {
+        "name": "seconds",
+        "var_type": "int",
+        "required": true,
+        "description": "Segundos a esperar para que aparezca la imagen",
+        "default": 0
+      },
+      {
+        "name": "get_word",
+        "var_type": "str",
+        "required": false,
+        "description": "Obtener la palabra donde se encuentra la imagen",
+        "default": null
+      },
+      {
+        "name": "background",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre de la imagen tomada",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Mover a la imagen",
+    "father": "move_to",
+    "options": [
+      "Center",
+      "Top",
+      "Center Top",
+      "Right",
+      "Center Right",
+      "Bottom",
+      "Center Bottom",
+      "Left",
+      "Center Left"
+    ],
+    "group": "virtual",
+    "params": [
+      {
+        "name": "ref",
+        "var_type": "dict",
+        "required": true,
+        "description": "Referencia de la imagen a buscar",
+        "default": null
+      },
+      {
+        "name": "point",
+        "var_type": "dict",
+        "required": true,
+        "description": "Punto donde se hará click en la imagen",
+        "default": "null"
+      },
+      {
+        "name": "accuracy",
+        "var_type": "float",
+        "required": true,
+        "description": "Precisión de la búsqueda de la imagen",
+        "default": 0.7
+      },
+      {
+        "name": "gray_scale",
+        "var_type": "int",
+        "required": true,
+        "description": "Buscar imagen en escala de grises",
+        "default": 1
+      },
+      {
+        "name": "seconds",
+        "var_type": "int",
+        "required": true,
+        "description": "Segundos a esperar para que aparezca la imagen",
+        "default": 0
+      },
+      {
+        "name": "get_word",
+        "var_type": "str",
+        "required": false,
+        "description": "Obtener la palabra donde se encuentra la imagen",
+        "default": null
+      },
+      {
+        "name": "background",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre de la imagen tomada",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Arrastrar a la imagen",
+    "father": "drag_to",
+    "options": [
+      "Center",
+      "Top",
+      "Center Top",
+      "Right",
+      "Center Right",
+      "Bottom",
+      "Center Bottom",
+      "Left",
+      "Center Left"
+    ],
+    "group": "virtual",
+    "params": [
+      {
+        "name": "ref",
+        "var_type": "dict",
+        "required": true,
+        "description": "Referencia de la imagen a buscar",
+        "default": null
+      },
+      {
+        "name": "point",
+        "var_type": "dict",
+        "required": true,
+        "description": "Punto donde se hará click en la imagen",
+        "default": "null"
+      },
+      {
+        "name": "accuracy",
+        "var_type": "float",
+        "required": true,
+        "description": "Precisión de la búsqueda de la imagen",
+        "default": 0.7
+      },
+      {
+        "name": "gray_scale",
+        "var_type": "int",
+        "required": true,
+        "description": "Buscar imagen en escala de grises",
+        "default": 1
+      },
+      {
+        "name": "seconds",
+        "var_type": "int",
+        "required": true,
+        "description": "Segundos a esperar para que aparezca la imagen",
+        "default": 0
+      },
+      {
+        "name": "get_word",
+        "var_type": "str",
+        "required": false,
+        "description": "Obtener la palabra donde se encuentra la imagen",
+        "default": null
+      },
+      {
+        "name": "background",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre de la imagen tomada",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Buscar por Imagen",
+    "father": "existimage",
+    "options": "",
+    "group": "virtual",
+    "params": [
+      {
+        "name": "ref",
+        "var_type": "dict",
+        "required": true,
+        "description": "Referencia de la imagen a buscar",
+        "default": null
+      },
+      {
+        "name": "point",
+        "var_type": "dict",
+        "required": true,
+        "description": "Punto donde se hará click en la imagen",
+        "default": "null"
+      },
+      {
+        "name": "accuracy",
+        "var_type": "float",
+        "required": true,
+        "description": "Precisión de la búsqueda de la imagen",
+        "default": 0.7
+      },
+      {
+        "name": "clicks",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de click a realizar",
+        "default": "simple"
+      },
+      {
+        "name": "gray_scale",
+        "var_type": "int",
+        "required": true,
+        "description": "Buscar imagen en escala de grises",
+        "default": 1
+      },
+      {
+        "name": "seconds",
+        "var_type": "int",
+        "required": true,
+        "description": "Segundos a esperar para que aparezca la imagen",
+        "default": 0
+      },
+      {
+        "name": "get_word",
+        "var_type": "str",
+        "required": false,
+        "description": "Obtener la palabra donde se encuentra la imagen",
+        "default": null
+      },
+      {
+        "name": "background",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre de la imagen tomada",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "OCR a Imagen",
+    "father": "ocrimage",
+    "options": "",
+    "group": "virtual",
+    "params": [
+      {
+        "name": "ref",
+        "var_type": "dict",
+        "required": true,
+        "description": "Referencia de la imagen a buscar",
+        "default": null
+      },
+      {
+        "name": "point",
+        "var_type": "dict",
+        "required": true,
+        "description": "Punto donde se hará click en la imagen",
+        "default": "null"
+      },
+      {
+        "name": "accuracy",
+        "var_type": "float",
+        "required": true,
+        "description": "Precisión de la búsqueda de la imagen",
+        "default": 0.7
+      },
+      {
+        "name": "clicks",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de click a realizar",
+        "default": "simple"
+      },
+      {
+        "name": "gray_scale",
+        "var_type": "int",
+        "required": true,
+        "description": "Buscar imagen en escala de grises",
+        "default": 1
+      },
+      {
+        "name": "seconds",
+        "var_type": "int",
+        "required": true,
+        "description": "Segundos a esperar para que aparezca la imagen",
+        "default": 0
+      },
+      {
+        "name": "get_word",
+        "var_type": "str",
+        "required": false,
+        "description": "Obtener la palabra donde se encuentra la imagen",
+        "default": null
+      },
+      {
+        "name": "background",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre de la imagen tomada",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Esperar por Imagen",
+    "father": "waitimage",
+    "options": "",
+    "group": "virtual",
+    "params": [
+      {
+        "name": "ref",
+        "var_type": "dict",
+        "required": true,
+        "description": "Referencia de la imagen a buscar",
+        "default": null
+      },
+      {
+        "name": "point",
+        "var_type": "dict",
+        "required": true,
+        "description": "Punto donde se hará click en la imagen",
+        "default": "null"
+      },
+      {
+        "name": "accuracy",
+        "var_type": "float",
+        "required": true,
+        "description": "Precisión de la búsqueda de la imagen",
+        "default": 0.7
+      },
+      {
+        "name": "clicks",
+        "var_type": "str",
+        "required": true,
+        "description": "Tipo de click a realizar",
+        "default": "simple"
+      },
+      {
+        "name": "gray_scale",
+        "var_type": "int",
+        "required": true,
+        "description": "Buscar imagen en escala de grises",
+        "default": 1
+      },
+      {
+        "name": "seconds",
+        "var_type": "int",
+        "required": true,
+        "description": "Segundos a esperar para que aparezca la imagen",
+        "default": 0
+      },
+      {
+        "name": "get_word",
+        "var_type": "str",
+        "required": false,
+        "description": "Obtener la palabra donde se encuentra la imagen",
+        "default": null
+      },
+      {
+        "name": "background",
+        "var_type": "str",
+        "required": true,
+        "description": "Nombre de la imagen tomada",
+        "default": null
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Configurar conexión Mysql",
+    "father": "connect",
+    "options": "",
+    "group": "db"
+  },
+  {
+    "title": "Consulta MySQL",
+    "father": "query",
+    "options": "",
+    "group": "db"
+  },
+  {
+    "title": "Configurar servidor",
+    "father": "configemail",
+    "options": "",
+    "group": "email"
+  },
+  {
+    "title": "Enviar email SMTP",
+    "father": "sendemail",
+    "options": "",
+    "group": "email"
+  },
+  {
+    "title": "Listar todos los email IMAP",
+    "father": "getallemail",
+    "options": "",
+    "group": "email"
+  },
+  {
+    "title": "Listar email nuevos IMAP",
+    "father": "getunreademail",
+    "options": "",
+    "group": "email"
+  },
+  {
+    "title": "Leer email por ID IMAP",
+    "father": "reademail",
+    "options": "",
+    "group": "email"
+  },
+  {
+    "title": "Conectar url GET",
+    "father": "geturl",
+    "options": "",
+    "group": "connect"
+  },
+  {
+    "title": "Conectar url Avanzado",
+    "father": "request",
+    "options": "",
+    "group": "connect"
+  },
+  {
+    "title": "Login",
+    "father": "login",
+    "options": "",
+    "group": "dashboard"
+  },
+  {
+    "title": "Traer Configuración",
+    "father": "getconfig",
+    "group": "dashboard"
+  },
+  {
+    "title": "Enviar y recibir información",
+    "father": "postdata",
+    "options": "",
+    "group": "dashboard"
+  },
+  {
+    "title": "Conectar con Aplicación",
+    "father": "connect_app",
+    "options": "",
+    "group": "windows"
+  },
+  {
+    "title": "Click en Objeto",
+    "father": "click",
+    "options": "",
+    "group": "windows"
+  },
+  {
+    "title": "Click relativo en objecto",
+    "father": "relative_click",
+    "options": "",
+    "group": "windows",
+    "params": [
+      {
+        "name": "selector",
+        "var_type": "dict",
+        "description": "Selector",
+        "required": true
+      },
+      {
+        "name": "timeout",
+        "var_type": "int",
+        "description": "Tiempo máximo de busqueda",
+        "required": false
+      },
+      {
+        "name": "click_type",
+        "var_type": "str",
+        "description": "Tipo de Click",
+        "required": false
+      },
+      {
+        "name": "button",
+        "var_type": "str",
+        "description": "Botón de Mouse",
+        "required": false
+      },
+      {
+        "name": "session",
+        "var_type": "str",
+        "description": "Identificador de la ventana",
+        "required": false
+      }
+    ],
+    "return": []
+  },
+  {
+    "title": "Obtener texto",
+    "father": "get_text",
+    "options": "",
+    "group": "windows"
+  },
+  {
+    "title": "Enviar texto a un objeto",
+    "father": "send_keys",
+    "options": "",
+    "group": "windows"
+  },
+  {
+    "title": "Escribir texto en un objeto editable",
+    "father": "set_text",
+    "options": "",
+    "group": "windows"
+  },
+  {
+    "title": "Scroll en un objeto",
+    "father": "wheel",
+    "options": "",
+    "group": "windows"
+  },
+  {
+    "title": "Seleccionar Item",
+    "father": "select_item",
+    "options": "",
+    "group": "windows"
+  },
+  {
+    "title": "Obtiene datos de Portapapeles",
+    "father": "getclipboard",
+    "options": "",
+    "group": "windows"
+  },
+  {
+    "title": "Rocketbot Transaction Framework",
+    "father": "RTFramework",
+    "options": "",
+    "group": "frameworks",
+    "params": [],
+    "return": []
+  },
+  {
+    "title": "Nuevo libro",
+    "father": "newxlsx",
+    "options": "",
+    "group": "excel"
+  },
+  {
+    "title": "Abrir archivo",
+    "father": "readxlsx",
+    "options": "",
+    "group": "excel"
+  },
+  {
+    "title": "Guardar Archivo",
+    "father": "savexlsx",
+    "options": "",
+    "group": "excel"
+  },
+  {
+    "title": "Exportar a PDF",
+    "father": "exportpdf",
+    "options": "",
+    "group": "excel"
+  },
+  {
+    "title": "Obtener Hojas",
+    "father": "getsheets",
+    "options": "",
+    "group": "excel"
+  },
+  {
+    "title": "Cambiar de Hoja",
+    "father": "setsheet",
+    "options": "",
+    "group": "excel"
+  },
+  {
+    "title": "Cambiar de Archivo",
+    "father": "switchtoexcel",
+    "options": "",
+    "group": "excel"
+  },
+  {
+    "title": "Contar Filas",
+    "father": "getrows",
+    "options": "",
+    "group": "excel"
+  },
+  {
+    "title": "Obtener celda",
+    "father": "getcell",
+    "options": "",
+    "group": "excel"
+  },
+  {
+    "title": "Ejecutar Macro",
+    "father": "runmacro",
+    "options": "",
+    "group": "excel"
+  },
+  {
+    "title": "Exportar Gráfico",
+    "father": "exportchart",
+    "options": "",
+    "group": "excel"
+  },
+  {
+    "title": "Exportar Gráfico",
+    "father": "export_chart",
+    "group": "excel"
+  },
+  {
+    "title": "Escribir Celda",
+    "father": "setcell",
+    "options": "",
+    "group": "excel"
+  },
+  {
+    "title": "Cerrar Excel",
+    "father": "quitexcel",
+    "options": null,
+    "group": "excel"
+  }
+]

@@ -1,0 +1,166 @@
+{
+  "Informe_Tecnico_EP2.pdf": [
+    {
+      "page": 1,
+      "width": 595.28,
+      "height": 841.89,
+      "min_font": 8.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 2,
+      "width": 595.28,
+      "height": 841.89,
+      "min_font": 8.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 3,
+      "width": 595.28,
+      "height": 841.89,
+      "min_font": 8.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 4,
+      "width": 595.28,
+      "height": 841.89,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 5,
+      "width": 595.28,
+      "height": 1346.56,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 6,
+      "width": 595.28,
+      "height": 1643.91,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 7,
+      "width": 792.46,
+      "height": 903.17,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 8,
+      "width": 1085.71,
+      "height": 924.89,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 9,
+      "width": 902.6,
+      "height": 875.8,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 10,
+      "width": 595.28,
+      "height": 1202.14,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 11,
+      "width": 595.28,
+      "height": 841.89,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 12,
+      "width": 842.0,
+      "height": 650.0,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 13,
+      "width": 842.0,
+      "height": 650.0,
+      "min_font": 9.0,
+      "text_inside_page": true
+    }
+  ],
+  "Presentacion_EP2.pdf": [
+    {
+      "page": 1,
+      "width": 960.0,
+      "height": 540.0,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 2,
+      "width": 960.0,
+      "height": 540.0,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 3,
+      "width": 960.0,
+      "height": 540.0,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 4,
+      "width": 960.0,
+      "height": 540.0,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 5,
+      "width": 960.0,
+      "height": 540.0,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 6,
+      "width": 960.0,
+      "height": 540.0,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 7,
+      "width": 960.0,
+      "height": 540.0,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 8,
+      "width": 960.0,
+      "height": 540.0,
+      "min_font": 9.0,
+      "text_inside_page": true
+    },
+    {
+      "page": 9,
+      "width": 960.0,
+      "height": 540.0,
+      "min_font": 9.0,
+      "text_inside_page": true
+    }
+  ],
+  "pptx": {
+    "slides": 9,
+    "shapes_inside_canvas": true,
+    "speaker_notes": true,
+    "powerpoint_render": "PENDIENTE; PDF paralelo revisable, no export de Office"
+  }
+}

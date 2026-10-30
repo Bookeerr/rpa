@@ -1,0 +1,29 @@
+sequenceDiagram
+  participant R as Rocketbot PENDIENTE
+  participant A as Audit auxiliar
+  participant W as TestFire
+  participant D as MySQL
+  participant H as API propia
+  R->>A: UUID + inicio UTC + reloj monotono
+  R->>W: Login y consulta por cuenta
+  W-->>R: Filas o error TLS/sesion
+  R->>A: Fin paso + estado + duracion
+  R->>D: Leer reglas y persistir conciliacion
+  alt SQL no disponible
+    R->>A: PARCIAL + outbox con IDs estables
+  else SQL disponible
+    R->>H: GET /health
+    loop Hasta 3 intentos transitorios
+      R->>A: Inicio intento HTTP
+      R->>H: POST /executions mismo UUID y payload
+      H->>D: INSERT api_receipts idempotente
+      H-->>R: 201 nuevo / 200 repetido / 409 conflicto
+      R->>A: Fin intento + duracion + JSON
+    end
+    R->>H: GET /executions/id
+    H-->>R: Resumen anterior al cierre
+  end
+  R->>A: Exportar Excel + cerrar navegador
+  R->>A: Estado global final + proyeccion de auditoria
+  R->>D: Reenviar outbox y guardar cierre
+  Note over R,H: Diseno. HTTP probado localmente con almacen de prueba

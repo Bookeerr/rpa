@@ -1,0 +1,32 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: Arial
+    fontSize: 20px
+  flowchart:
+    rankSpacing: 16
+    nodeSpacing: 16
+    padding: 8
+    wrappingWidth: 240
+---
+flowchart TD
+  A["INIT_CONFIG + AUDIT_START"] --> B["WEB_LOGIN"]
+  B --> C{"Sesion valida?"}
+  C -->|No| ERR["ERROR_HANDLER: error original + captura segura"]
+  C -->|Si| D["EXTRACT_ACCOUNTS + reglas SQL"]
+  D --> E{"Otra cuenta seleccionada?"}
+  E -->|Si| F["EXTRACT_TRANSACTIONS"]
+  F --> G{"Tabla y sesion presentes?"}
+  G -->|No| ERR
+  G -->|Si| H{"Otra fila?"}
+  H -->|Si| I["VALIDATE_DATA: Regex + Decimal"]
+  I --> J{"Fila valida?"}
+  J -->|Si| K["Conservar raw + normalizado"]
+  J -->|No| L["Conservar rechazo y motivo"]
+  K --> H
+  L --> H
+  H -->|No| E
+  E -->|No| NEXT["Continuar en figura 1b: referencias e integracion"]
+  ERR --> END["Reporte si es posible + cierre ERROR"]
+  NOTE["DISENO: comprobacion en Studio pendiente"]
